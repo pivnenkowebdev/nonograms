@@ -1,0 +1,9 @@
+.timer-wrapper {
+  
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  transition: color 0.5s;;
+}

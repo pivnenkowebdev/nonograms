@@ -1,0 +1,79 @@
+.fade {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: -100%;
+  left: 0;
+  background-color: $fadeBg;
+  transition: top 0.5s;
+
+  &.open {
+    top:0;
+  }
+
+  // &--records {
+  //   top:0;
+  // }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  background-color: $modalBg;
+  border-radius: 10px;
+
+  &--records {
+    padding-top: 70px;
+  }
+}
+
+.modal__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal__time {
+  color: $modalTime;
+}
+
+.modal__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/cross-black.svg);
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.modal-win-item {
+  border: 1px solid rgb(36, 35, 35);
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-win-text {
+  font-size: 20px;
+}

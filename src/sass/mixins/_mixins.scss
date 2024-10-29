@@ -1,0 +1,24 @@
+@mixin night-mode-btn-hover ($shadowColorHover) {
+
+  @media (hover:hover) {
+    &:hover {
+      transform: rotate(250deg);
+      box-shadow: 0 0 3px 3px $shadowColorHover;
+  
+      .btn-night-mode__img {  
+        transform: scale(1.2);
+      }
+    }
+  }
+
+}
+
+@mixin btn-hover ($shadowColorHover) {
+
+  @media (hover:hover) {
+    &:hover {
+      box-shadow: 0 0 3px 3px $shadowColorHover;
+    }
+  }
+
+}

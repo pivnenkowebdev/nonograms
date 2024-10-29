@@ -1,0 +1,22 @@
+.btn-night-mode {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $nightModeBtn;
+  transition: transform 0.5s, box-shadow 0.5s;
+
+  &__row {
+    display: flex;
+    transition: transform 0.5s;
+  }
+  
+  &__img {  
+    border-radius: 50%;
+    transform: scale(0.6);
+    transition: transform 0.5s;
+  }
+
+  @include night-mode-btn-hover($shadowColorNightBtnHover);
+
+}

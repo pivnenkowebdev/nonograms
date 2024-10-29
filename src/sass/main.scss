@@ -1,0 +1,21 @@
+// mixins
+@import './mixins/mixins';
+
+// base
+@import './base/vars';
+@import './base/reset';
+@import './base/base';
+
+
+// blocks
+@import './blocks/burger';
+@import './blocks/night-mode';
+@import './blocks/timer';
+@import './blocks/modal';
+
+// sections
+@import './sections/header';
+@import './sections/play-zone';
+@import './sections/menu';
+@import './sections/footer';
+

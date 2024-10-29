@@ -1,0 +1,201 @@
+body {
+  background-color: $bodyBg;
+  transition: background-color 0.5s;
+  font-family: 'Silkscreen', sans-serif;
+
+  &.night-mode {
+
+    background-color: $bodyBgNight;
+
+    .menu {
+      background-color: $menuBgNight;
+    }
+
+    .game-area {
+
+      border-color: $gameAreaBorderNight;
+      background-color: $gameAreaNight;
+
+      &__column-clue {
+        border-bottom: 2px solid $gameAreaBorderNight;
+      }
+
+      &__row-clue {
+        border-right: 2px solid $gameAreaBorderNight;
+      }
+
+      &__row {
+        display: flex;
+    
+        &:nth-child(5n):not(:last-child) {
+          border-bottom: 2px solid $gameAreaBorderNight;
+        }
+      }
+
+      &__cell-clue {
+        color: $textColorNight;
+
+        &--column {
+          &:nth-child(5n):not(:last-child) {
+            border-right: 2px solid $gameAreaBorderNight;
+          }
+        }
+
+        &--row {
+          min-height: 20.3px;
+          line-height: 1.133;
+          min-width: 20px;
+    
+          &:first-child {
+            border-top: 2px solid $gameAreaBorderNight;
+          }
+          
+          &:nth-child(5n):not(:last-child) {
+            border-bottom: 2px solid $gameAreaBorderNight;
+          }
+        }
+      }
+
+      .cell {
+
+        &:nth-child(5n):not(:last-child) {
+          border-right: 2px solid $gameAreaBorderNight;
+        }
+
+        .cell__front {
+          background-color: $gameAreaNight;
+          transform: perspective(600px) rotateY(0deg);
+
+          @media (hover:hover) {
+            &:hover {
+              background-color: $hoverCellNight;
+            }
+          }
+        }
+        
+        &__back {
+          background-color: $cellTrueNight;
+          transform: perspective(600px) rotateY(180deg);
+          
+          @media (hover:hover) {
+            &:hover {
+              background-color: $hoverCellNight;
+            }
+          }
+        }
+
+        &.cross {
+          .cell__front {
+            background-size: cover;
+            background-position: center;
+            background-image: url(.././img/cross-white.svg);
+          }
+        }
+      }
+    }
+
+    .btn-night-mode {
+      background-color: $nightModeBtnNight;
+
+      &__row {
+        transform: translate(-100%)
+      }
+
+      @include night-mode-btn-hover($shadowColorNightBtnHoverNight);
+    }
+
+    .burger {
+      
+      &__line {
+
+        background-color: $burgerLineNight;
+    
+        &:before,
+        &::after {
+          background-color: $burgerLineNight;
+        }
+    
+      }
+    }
+    
+    .level {
+      &__title {
+        color: $colorTitleNight;
+      }
+    }
+
+    .hint-picture {
+      &__title {
+        color: $colorTitleNight;
+      }
+    }
+
+    .action-element {
+      background-color: $btnColorNight;
+      color: $colorTextNight;
+      @include btn-hover($shadowColorNightBtnHoverNight);
+    }
+
+    .init-row {
+      &__btn-start {
+        background-color: $btnStartNight;
+        color: $colorText;
+      }
+
+      &__btn-random {
+        background-color: $btnRandomNight;
+        color: $colorText;
+      }
+    }
+
+    .utilities-row {
+      &__btn-reset {
+        background-color: $resetBtnNight;
+        color: $colorText;
+      }
+
+      &__btn-save {
+        background-color: $saveBtnNight;
+        color: $colorText;
+      }
+
+      &__btn-load {
+        background-color: $loadBtnNight;
+        color: $colorText;
+      }
+    }
+
+    .modal {
+      background-color: $modalBgNight;
+
+      &__text {
+        color: $btnColorNight;
+      }
+
+      &__close {
+        background-image: url(../img/cross-white.svg);
+      }
+    }
+
+    .fade {
+      background-color: $fadeBgNight;
+    }
+
+    .modal-win-item {
+      color: $btnColorNight;
+    }
+
+    .timer-wrapper,
+    .title {
+      color: $btnColorNight;
+    }
+
+    .modal-win-item {
+      border-color: $btnColorNight;
+    }
+
+    .sound-btn {
+      background-color: $btnColor;
+    }
+  }
+}
